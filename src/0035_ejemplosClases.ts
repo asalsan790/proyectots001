@@ -1,6 +1,7 @@
 // ejemolos tomados de youtube makigas: tutoriales de programación:
 // https://www.youtube.com/makigas
 
+// Herencia de métodos 
 class Vehiculo{
 
     moverse(){
@@ -26,4 +27,3 @@ let v2 = new Terrestre()
 v2.moverse()
 let v3 = new Maritimo()
 v3.moverse()
-
