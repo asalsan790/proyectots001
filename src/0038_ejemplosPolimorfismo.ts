@@ -1,11 +1,10 @@
-// ejemplos tomados de youtube makigas: tutoriales de programación:
-// https://www.youtube.com/makigas
+// Cambiar lo necesario para explicar el polimorfismo
 
 // Herencia con constructores
 
 // atributo protected para que se pueda usar en las subclases
 // si declaramos la clase abstract no la podremos instanciar
-abstract class Vehiculo2{
+abstract class Vehiculo3{
     protected _fabricante: string
 
     constructor(_fabricante: string){
@@ -16,17 +15,17 @@ abstract class Vehiculo2{
         console.log(`nos movemos con ${this._fabricante}`)
     }
 }
-class Terrestre2 extends Vehiculo2{
+class Terrestre3 extends Vehiculo3{
 
 }
-class Maritimo2 extends Vehiculo2{
+class Maritimo3 extends Vehiculo3{
     moverse(){
         super.moverse()
         console.log('soy marítimo')
     }
 
 }
-class Aereo2 extends Vehiculo2{
+class Aereo3 extends Vehiculo3{
     private _tipo: string
     constructor(_fabricante: string, _tipo: string){
         super(_fabricante)
@@ -46,10 +45,10 @@ a un objeto de la superclase como a uno de cualquiera de las subclases
 Pero si referencia a una subclase no puede usar las propiedades declaradas
 en la superclase
 */
-let vb: Vehiculo = new Terrestre2('Land Rover')
+let v30: Vehiculo3 = new Terrestre3('Land Rover')
 vb.moverse()
-let vc: Maritimo2 = new Maritimo2('Owecraf')
+let v31: Maritimo3 = new Maritimo3('Owecraf')
 vc.moverse()
-let vd = new Aereo2('helicoptero', 'Airbus')
+let v32 = new Aereo3('helicoptero', 'Airbus')
 vd.moverse()
 
