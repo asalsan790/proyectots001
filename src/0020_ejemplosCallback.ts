@@ -105,14 +105,20 @@ main08(2, 3, function(t: number) {
 /*
    Esta es la función que tiene el callback. 
    Recibe dos parámetros y una función con una determinada estructura, 
-   que a su vez recibe un parámetro.
+        que a su vez recibe un parámetro.
    Hace su tarea con los parámetros recibidos 
    y al final invoca a la función recibida con para su ejecución enviándole un valor.
 */
 let main09 = (a: number, b: number, callback: (r: number) => void ) => {  
     var total = a + b;  
     callback( total );  
-}  
+} 
+
+/*
+    Cuando invocamos a la función anterior hay que saber que hará su 
+    tarea con los valores 2 y 2 y luego se ejecutará la función 
+    que le estoy mandando con un valor recibido en t.
+*/
 main09(2, 2, (t: number) => {  
         if(t >= 5){  
             console.log("Prueba superada: " + t);  
