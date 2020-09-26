@@ -83,32 +83,42 @@ main07( (nombre: string) =>
         console.log('Qué tal estás'+ nombre) 
     )
 
-// Nos vamos al penúltimo ejemplo
+
+
+// Ejemplo ??
+// Función principal con parámetros y función anónima
 
 function main08 (a: number, b: number, callback: any){  
     let total = a+b;  
     callback(total);  
-   }  
+}  
 main08(2, 3, function(t: number) {  
-    if(t>=5){  
-     console.log("Prueba superada: " + t);  
+    if( t >=5 ){  
+        console.log("Prueba superada: " + t);  
     }else{  
-     console.log("Inténtalo de nuevo: " + t);  
+        console.log("Inténtalo de nuevo: " + t);  
     }  
    }
 );  
 
 ///////// Con otra notación
-
-function main09(a: number, b: number, callback: (r: number) => void){  
+/*
+   Esta es la función que tiene el callback. 
+   Recibe dos parámetros y una función con una determinada estructura, 
+   que a su vez recibe un parámetro.
+   Hace su tarea con los parámetros recibidos 
+   y al final invoca a la función recibida con para su ejecución enviándole un valor.
+*/
+let main09 = (a: number, b: number, callback: (r: number) => void ) => {  
     var total = a + b;  
     callback( total );  
 }  
-main09(2, 2, (t) => {  
+main09(2, 2, (t: number) => {  
         if(t >= 5){  
             console.log("Prueba superada: " + t);  
         }else{  
             console.log("Inténtalo de nuevo: " + t);  
         }  
+
     }
 ); 
