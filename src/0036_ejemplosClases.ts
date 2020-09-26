@@ -46,7 +46,7 @@ a un objeto de la superclase como a uno de cualquiera de las subclases
 Pero si referencia a una subclase no puede usar las propiedades declaradas
 en la superclase
 */
-let vb: Vehiculo = new Terrestre2('Land Rover')
+let vb: Vehiculo2 = new Terrestre2('Land Rover')
 vb.moverse()
 let vc: Maritimo2 = new Maritimo2('Owecraf')
 vc.moverse()
